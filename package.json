@@ -1,0 +1,36 @@
+{
+  "name": "material-ui-editable-table",
+  "version": "0.0.1",
+  "description": "Multi-row editable table using material-ui with redux",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo 'Error: no tests' && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/godspeed20/mui-editable-table.git"
+  },
+  "keywords": [
+    "material-ui",
+    "mui",
+    "table",
+    "editable"
+  ],
+  "author": "Riaz Khanmohamed",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/godspeed20/mui-editable-table/issues"
+  },
+  "homepage": "https://github.com/godspeed20/mui-editable-table",
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "material-ui": "^0.16.6",
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1",
+    "react-tap-event-plugin": "^2.0.1"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
+  }
+}
