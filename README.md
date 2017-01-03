@@ -21,11 +21,11 @@ I'm quite new to the whole packaging stuff so although it works in code, getting
 
 ## Install
 
-npm route coming soon. For now, download the index.js file into your project (you'll need the prod dependencies from the package.json).
+npm route coming soon. For now, download the src/app/index.js file into your project (you'll need the prod dependencies from the package.json).
 
 ## Usage
 
-Once imported into your codebase and the main index file is somewhere in your codebase (feel free to rename it to something better like MuiEditableTable.js or similar) you just have to reference it and pass it the relevant fields. 
+Once imported into your codebase and the main index file is somewhere in your codebase (feel free to rename it to something better like MuiEditableTable.js or similar) you just have to reference it and pass it the relevant fields. Take a look at src/app/Demo.js for an example, but more details can be found below. 
 
 First include it
 ```javascript
@@ -49,15 +49,14 @@ Then in your code include it within a form like so
 The colSpec would look something like this:
 ```javascript
 const colSpec = [
-    {title: 'Title', fieldName: 'title', type: "SelectField", selectOptions: ["Mr", "Mrs", "Miss", "Other"], width: 200, defaultValue: 'Mr'},
-    {title: 'Title (Manual)', fieldName: 'title', type: "TextField", width: 200, isDisabled: shouldBeDisabled},
-    {title: 'Name', fieldName: 'foreName', type: "TextField", width: 200},
-    {title: 'Surname', fieldName: 'surname', type: "TextField", width: 200}
+    {title: 'Title', fieldName: 'title', inputType: "SelectField", selectOptions: ["Mr", "Mrs", "Miss", "Other"], width: 200, defaultValue: 'Mr'},
+    {title: 'Name', fieldName: 'foreName', inputType: "TextField", width: 200},
+    {title: 'Surname', fieldName: 'surname', inputType: "TextField", width: 200}
 ];
 ```
 * Title - the header column value
 * fieldName - the value from the rowData object that matches this column and will be used for its data
-* type - for now either TextField or SelectField
+* inputType - field type to render. For now either TextField or SelectField
 * width - how wide your want the column to be
 * defaultValue (optional) - should you wish to default your field, say for a number field you might want to default to 0.0, or a country field to your default country, etc
 * selectOptions (SelectField only) - list of options for your select dropdown. Note it can be a list of strings, or a list of key->value pairs. For the latter you'll need to set them up like [{key: 'keyValue', value: 'displayValue'}]
