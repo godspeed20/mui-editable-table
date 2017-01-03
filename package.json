@@ -1,6 +1,6 @@
 {
   "name": "mui-editable-table",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Multi-row editable table using material-ui with redux",
   "scripts": {
     "start": "webpack-dev-server --config webpack-dev-server.config.js --progress --inline --colors",
