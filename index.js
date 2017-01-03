@@ -6,7 +6,7 @@ const MenuItem = require("material-ui/MenuItem");
 const FontIcon = require('material-ui/FontIcon');
 const $ = require("jquery");
 
-module.exports = class MuiEditableTable extends React.Component {
+class MuiEditableTable extends React.Component {
 
     constructor(props) {
         super(props);
@@ -228,3 +228,5 @@ module.exports = class MuiEditableTable extends React.Component {
         }
     }
 }
+
+export default MuiEditableTable;
