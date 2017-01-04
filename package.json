@@ -2,6 +2,7 @@
   "name": "mui-editable-table",
   "version": "0.1.0",
   "description": "Multi-row editable table using material-ui with redux",
+  "scripts": {
     "test": "echo 'Error: no tests' && exit 1"
   },
   "repository": {
