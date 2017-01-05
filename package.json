@@ -1,6 +1,6 @@
 {
   "name": "mui-editable-table",
-  "version": "0.1.0",
+  "version": "0.1.3",
   "description": "Multi-row editable table using material-ui with redux",
   "main": "build/MuiEditableTable.js",
   "jsnext:main": "src/MuiEditableTable.js",
@@ -9,7 +9,7 @@
     "test": "echo 'Error: no tests' && exit 1"
   },
   "files": [
-    "lib",
+    "build",
     "src"
   ],
   "repository": {
