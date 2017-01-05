@@ -11,35 +11,37 @@ Hopefully this one will give some of you some benefit with enough customisation 
 
 ## Limitations
 
-It currently only supports textfield and selectfield from mui, mostly because that's all I used. Should be fairly straightforward to add more though
-I'm quite new to the whole packaging stuff so although it works in code, getting it to package is a different matter. I'm getting there, but bear with me please
+It currently only supports textfield and selectfield from mui, mostly because that's all I used. Should be fairly straightforward to add more though.
 
 ##TODO: 
-* npm package
-* commit tests
+* Add tests
 * Add toggle field
 
 ## Install
 
-npm route coming soon. For now, download the src/app/index.js file into your project (you'll need the prod dependencies from the package.json).
+```javascript
+npm install mui-editable-table --save
+```
 
 ## Usage
 
-Once imported into your codebase and the main index file is somewhere in your codebase (feel free to rename it to something better like MuiEditableTable.js or similar) you just have to reference it and pass it the relevant fields. Take a look at src/app/Demo.js for an example, but more details can be found below. 
+Once installed, reference it and pass it the relevant fields. Take a look at the demo under the example folder, or for a quick read continue below or look at example/src/app/Demo.js. 
 
 First include it
+
 ```javascript
-const MuiEditableTable = require("./MuiEditableTable");
+import MuiEditableTable from "mui-editable-table";
 ```
 
 Then in your code include it within a form like so
+
 ```javascript
-            <MuiEditableTable
-                colSpec={this.colSpec}
-                rowData={this.rowData}
-                onChange={onChange}
-                reorderable={true}
-            />
+<MuiEditableTable
+    colSpec={this.colSpec}
+    rowData={this.rowData}
+    onChange={onChange}
+    reorderable={true}
+/>
 ```
 * colSpec - see below, config for each column
 * rowData - array of records that can be mapped (partially or fully) to the colSpec
