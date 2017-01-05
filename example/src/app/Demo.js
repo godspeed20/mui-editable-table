@@ -12,7 +12,7 @@ class Demo extends Component {
           {title: 'Title', fieldName: 'title', inputType: "SelectField", selectOptions: ["Mr", "Mrs", "Miss", "Other"], width: 200, defaultValue: 'Mr'},
           {title: 'Name', fieldName: 'foreName', inputType: "TextField", width: 200},
           {title: 'Surname', fieldName: 'surname', inputType: "TextField", width: 200},
-          {title: 'Maiden Name', fieldName: 'maidenName', inputType: "TextField", width: 200, isDisabled: shouldBeReadOnly}
+          {title: 'Maiden Name', fieldName: 'maidenName', inputType: "TextField", width: 200, isReadOnly: shouldBeReadOnly}
       ];
 
       const rowData = [
