@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import MuiEditableTable from "./index";
+import MuiEditableTable from "mui-editable-table";
 
 class Demo extends Component {
 

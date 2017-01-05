@@ -2,9 +2,16 @@
   "name": "mui-editable-table",
   "version": "0.1.0",
   "description": "Multi-row editable table using material-ui with redux",
+  "main": "build/MuiEditableTable.js",
+  "jsnext:main": "src/MuiEditableTable.js",
   "scripts": {
+    "bundle": "cross-env NODE_ENV=release babel ./src --out-dir ./build",
     "test": "echo 'Error: no tests' && exit 1"
   },
+  "files": [
+    "lib",
+    "src"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/godspeed20/mui-editable-table.git"
@@ -13,7 +20,10 @@
     "material-ui",
     "mui",
     "table",
-    "editable"
+    "editable",
+    "component",
+    "javascript",
+    "react-component"
   ],
   "author": "godspeed20",
   "license": "MIT",
@@ -21,12 +31,26 @@
     "url": "https://github.com/godspeed20/mui-editable-table/issues"
   },
   "homepage": "https://github.com/godspeed20/mui-editable-table",
-  "main": "MuiEditableTable.js",
   "dependencies": {
     "jquery": "^3.1.1",
     "material-ui": "^0.16.4",
     "react": "^15.4.0",
     "react-dom": "^15.4.0",
     "react-tap-event-plugin": "^2.0.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.8",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-stage-2": "^6.18.0",
+    "chai": "^3.5.0",
+    "cross-env": "^3.1.4",
+    "html-webpack-plugin": "^2.24.1",
+    "mocha": "^3.2.0",
+    "transfer-webpack-plugin": "^0.1.4",
+    "webpack": "^1.13.3",
+    "webpack-dev-server": "^1.16.2"
   }
 }

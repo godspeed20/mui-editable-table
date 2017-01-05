@@ -1,7 +1,7 @@
 import React from 'react';
 import {render} from 'react-dom';
 import injectTapEventPlugin from 'react-tap-event-plugin';
-import MuiEditableTable from './muiEditableTable'; // Our custom react component
+import Demo from './Demo'; // Our custom react component
 
 // Needed for onTouchTap
 // http://stackoverflow.com/a/34015469/988941
@@ -9,4 +9,4 @@ injectTapEventPlugin();
 
 // Render the main app react component into the app div.
 // For more details see: https://facebook.github.io/react/docs/top-level-api.html#react.render
-render(<MuiEditableTable />, document.getElementById('app'));
+render(<Demo />, document.getElementById('app'));
