@@ -9,6 +9,8 @@ I've seen a few of these, including a great one by emkay (https://github.com/emk
 
 Hopefully this one will give some of you some benefit with enough customisation to play with in your use cases.
 
+I've also left in all the build/demo run code which I used from windows so hopefully other people won't have the same issues I did trying to get the bundling working for a new component.
+
 ## Limitations
 
 It currently only supports textfield and selectfield from mui, mostly because that's all I used. Should be fairly straightforward to add more though.
