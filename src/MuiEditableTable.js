@@ -133,7 +133,7 @@ class MuiEditableTable extends React.Component {
                     id={column.fieldName + index}
                     style={{width: column.width}}
                     value={column.fieldName in rowData ? rowData[column.fieldName] : ''}
-                    disabled={column.isDisabled ? column.isDisabled(rowData) : false}
+                    disabled={column.isReadOnly ? column.isReadOnly(rowData) : false}
                     onChange={this.onFieldChange(index, column.fieldName)}
                 />
             )
@@ -144,7 +144,7 @@ class MuiEditableTable extends React.Component {
                     id={column.fieldName + index}
                     style={{width: column.width}}
                     value={column.fieldName in rowData ? rowData[column.fieldName] : ''}
-                    disabled={column.isDisabled ? column.isDisabled(rowData) : false}
+                    disabled={column.isReadOnly ? column.isReadOnly(rowData) : false}
                     onChange={this.onFieldChange(index, column.fieldName)}
                 >
                     {column.selectOptions.map((option) => (

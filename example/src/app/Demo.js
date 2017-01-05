@@ -5,14 +5,14 @@ import MuiEditableTable from "mui-editable-table";
 class Demo extends Component {
 
   render() {
-      const shouldBeDisabled = function(rowData) {
+      const shouldBeReadOnly = function(rowData) {
           return rowData['title'] != 'Mrs';
       };
       const colSpec = [
           {title: 'Title', fieldName: 'title', inputType: "SelectField", selectOptions: ["Mr", "Mrs", "Miss", "Other"], width: 200, defaultValue: 'Mr'},
           {title: 'Name', fieldName: 'foreName', inputType: "TextField", width: 200},
           {title: 'Surname', fieldName: 'surname', inputType: "TextField", width: 200},
-          {title: 'Maiden Name', fieldName: 'maidenName', inputType: "TextField", width: 200, isDisabled: shouldBeDisabled}
+          {title: 'Maiden Name', fieldName: 'maidenName', inputType: "TextField", width: 200, isReadOnly: shouldBeReadOnly}
       ];
 
       const rowData = [
