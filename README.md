@@ -11,10 +11,6 @@ Hopefully this one will give some of you some benefit with enough customisation 
 
 I've also left in all the build/demo run code which I used from windows so hopefully other people won't have the same issues I did trying to get the bundling working for a new component.
 
-## Limitations
-
-It currently only supports textfield and selectfield from mui, mostly because that's all I used. Should be fairly straightforward to add more though.
-
 ##TODO: 
 * Add tests
 * Add toggle support for 1/0
