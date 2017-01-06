@@ -2,6 +2,7 @@ import React from "react";
 import FlatButton from "material-ui/FlatButton";
 import TextField from "material-ui/TextField";
 import SelectField from "material-ui/SelectField";
+import Toggle from "material-ui/Toggle";
 import MenuItem from "material-ui/MenuItem";
 import AddIcon from 'material-ui/svg-icons/content/add';
 import DeleteIcon from 'material-ui/svg-icons/content/clear';
@@ -153,6 +154,16 @@ class MuiEditableTable extends React.Component {
                         this.createSelectOption(option)
                     ))}
                 </SelectField>
+            )
+        } else if (column.inputType === "Toggle") {
+            return (
+                <Toggle
+                    ref={column.fieldName + index}
+                    id={column.fieldName + index}
+                    style={{width: column.width}}
+                    defaultToggled={column.fieldName in rowData ? rowData[column.fieldName] : false}
+                    onToggle={this.onFieldChange(index, column.fieldName)}
+                />
             )
         }
         throw new Error("Input field type " + column.inputType + " not supported");

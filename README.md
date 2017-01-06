@@ -17,7 +17,7 @@ It currently only supports textfield and selectfield from mui, mostly because th
 
 ##TODO: 
 * Add tests
-* Add toggle field
+* Add toggle support for 1/0
 
 ## Install
 
@@ -55,12 +55,14 @@ The colSpec would look something like this:
 const colSpec = [
     {title: 'Title', fieldName: 'title', inputType: "SelectField", selectOptions: ["Mr", "Mrs", "Miss", "Other"], width: 200, defaultValue: 'Mr'},
     {title: 'Name', fieldName: 'foreName', inputType: "TextField", width: 200},
-    {title: 'Surname', fieldName: 'surname', inputType: "TextField", width: 200}
+    {title: 'Surname', fieldName: 'surname', inputType: "TextField", width: 200},
+    {title: 'Maiden Name', fieldName: 'maidenName', inputType: "TextField", width: 200, isReadOnly: shouldBeReadOnly},
+    {title: 'Employed', fieldName: 'employed', inputType: "Toggle", width: 200}
 ];
 ```
 * Title - the header column value
 * fieldName - the value from the rowData object that matches this column and will be used for its data
-* inputType - field type to render. For now either TextField or SelectField
+* inputType - field type to render. Supported types: TextField, SelectField, Toggle
 * width - how wide your want the column to be
 * defaultValue (optional) - should you wish to default your field, say for a number field you might want to default to 0.0, or a country field to your default country, etc
 * selectOptions (SelectField only) - list of options for your select dropdown. Note it can be a list of strings, or a list of key->value pairs. For the latter you'll need to set them up like [{key: 'keyValue', value: 'displayValue'}]
@@ -69,9 +71,9 @@ const colSpec = [
 The rowData for the above colSpec could look something like this:
 ```javascript
 const rowData = [
-    { title: 'Mr', foreName: 'John', surname: 'Smith'},
-    { title: 'Miss', foreName: 'Emily', surname: 'Lockhart'},
-    { title: 'Mrs', foreName: 'Marilyn', surname: 'Monroe'}
+    { title: 'Mr', foreName: 'John', surname: 'Smith', employed: true},
+    { title: 'Miss', foreName: 'Emily', surname: 'Lockhart', employed: false},
+    { title: 'Mrs', foreName: 'Marilyn', surname: 'Monroe', employed: true}
 ];
 ```
 
