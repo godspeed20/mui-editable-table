@@ -8,6 +8,7 @@ class Demo extends Component {
       const shouldBeReadOnly = function(rowData) {
           return rowData['title'] != 'Mrs';
       };
+
       const colSpec = [
           {title: 'Title', fieldName: 'title', inputType: "SelectField", selectOptions: ["Mr", "Mrs", "Miss", "Other"], width: 200, defaultValue: 'Mr'},
           {title: 'Name', fieldName: 'foreName', inputType: "TextField", width: 200},

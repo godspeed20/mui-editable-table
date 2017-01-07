@@ -11,9 +11,7 @@ Hopefully this one will give some of you some benefit with enough customisation 
 
 I've also left in all the build/demo run code which I used from windows so hopefully other people won't have the same issues I did trying to get the bundling working for a new component.
 
-##TODO: 
-* Add tests
-* Add toggle support for 1/0
+<img src="https://raw.githubusercontent.com/godspeed20/mui-editable-table/master/example.png">
 
 ## Install
 
@@ -58,7 +56,7 @@ const colSpec = [
 ```
 * Title - the header column value
 * fieldName - the value from the rowData object that matches this column and will be used for its data
-* inputType - field type to render. Supported types: TextField, SelectField, Toggle
+* inputType - field type to render. Supported types: TextField, SelectField, Toggle (toggle only supports true/false values)
 * width - how wide your want the column to be
 * defaultValue (optional) - should you wish to default your field, say for a number field you might want to default to 0.0, or a country field to your default country, etc
 * selectOptions (SelectField only) - list of options for your select dropdown. Note it can be a list of strings, or a list of key->value pairs. For the latter you'll need to set them up like [{key: 'keyValue', value: 'displayValue'}]
