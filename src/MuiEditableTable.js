@@ -128,7 +128,7 @@ class MuiEditableTable extends React.Component {
 
     renderInputField(column, index, rowData) {
         if (column.isReadOnly && column.isReadOnly(rowData)){
-            return (<div style={{width: column.width}}>{column.fieldName in rowData ? rowData[column.fieldName] : ''}</div>)
+            return (<div style={{width: column.width}}></div>)
         }
 
         if (column.inputType === "TextField") {
