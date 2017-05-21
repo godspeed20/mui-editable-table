@@ -1,6 +1,8 @@
 # mui-editable-table
 Multi-row editable table using material-ui with redux
 
+* Requires react 15.3.0 and up 
+
 I've seen a few of these, including a great one by emkay (https://github.com/emkay/material-ui-table-edit), but unfortunately none quite gave me the functionality I wanted. I was looking for a table that:
 * was object driven
 * allowed me to edit the entire table in one go (say you have a record with a set of sub rules, such as a strategy configuration, your users might want to edit the whole thing in one go)
