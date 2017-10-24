@@ -16,6 +16,7 @@ class MuiEditableTable extends React.Component {
         super(props);
 
         this.state = {
+            containerStyle: this.props.containerStyle || {},
             rowData: [],
             colSpec: [],
             reorderable: false,
@@ -50,7 +51,7 @@ class MuiEditableTable extends React.Component {
         };
 
         return (
-            <div className="container">
+            <div className="container" style={this.state.containerStyle}>
                 <div className="mui-editable-table" style={editableTableStyle}>
                     {this.renderHeader()}
 
