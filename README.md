@@ -36,12 +36,14 @@ Then in your code include it within a form like so
 ```javascript
 <MuiEditableTable
     colSpec={this.colSpec}
+    containerStyle={{width: "500px"}}
     rowData={this.rowData}
     onChange={onChange}
     reorderable={true}
 />
 ```
 * colSpec - see below, config for each column
+* containerStyle (optional) - styling for the table container div
 * rowData - array of records that can be mapped (partially or fully) to the colSpec
 * onChange - event to trigger when any changes to the editable table occur, will receive entire data structure back each time
 * reorderable (optional) - if set to true, allows rows to be reordered on the table via the up/down arrows
